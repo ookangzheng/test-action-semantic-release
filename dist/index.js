@@ -20,6 +20,7 @@ const trigger_release = core.getInput('trigger_release')
 
 try {
   exec('chmod +x ./main.sh')
+  console.log(`./main.sh ${repo_name.toString()} ${branch_name.toString()} ${user_name.toString()} ${user_email.toString()} ${trigger_release.toString()} ${GITHUB_TOKEN.toString()}`)
 
   exec(`./main.sh ${repo_name.toString()} ${branch_name.toString()} ${user_name.toString()} ${user_email.toString()} ${trigger_release.toString()} ${GITHUB_TOKEN.toString()}`, (error, stdout, stderr) => {
     if (error) {

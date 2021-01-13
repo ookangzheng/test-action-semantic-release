@@ -8,7 +8,7 @@ TRIGGER_RELEASE=$5
 
 TEAM=""
 
-if [[ "$USER_NAME" == "ookangzheng" ]]; then
+if [[ $USER_NAME == "ookangzheng" ]]; then
   TEAM="sygna"
 fi
 
