@@ -1,0 +1,26 @@
+name: "cb-semantic-release"
+description: "semantic release action"
+inputs:
+  branch_name: # id of input
+    description: "Current branch name"
+    required: true
+    default: ""
+  repo_name:
+    description: "Current repo name"
+    required: true
+  user_name:
+    description: "Github current username"
+    required: true
+  user_email:
+    description: "Github current user.email"
+    required: true
+  trigger_release:
+    description: "Do you want to release"
+    required: true
+    default: true
+outputs:
+  time: # id of output
+    description: "The time we greeted you"
+runs:
+  using: "node14"
+  main: "dist/index.js"

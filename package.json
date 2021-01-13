@@ -1,0 +1,20 @@
+{
+  "name": "github-action-semantic-release",
+  "version": "1.0.0",
+  "description": "Github Action - Semantic release",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build index.js",
+    "clean-all": "npx lerna exec 'rm -rf node_modules dist'"
+  },
+  "author": "ookangzheng",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "@vercel/ncc": "^0.27.0"
+  },
+  "devDependencies": {
+    "shelljs": "^0.8.4"
+  }
+}
