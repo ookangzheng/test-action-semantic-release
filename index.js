@@ -1,11 +1,8 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-const sh = require('shelljs');
+// const sh = require('shelljs');
+const { exec } = require('child_process');
 
-if (!sh.which('git')) {
-  sh.echo('Sorry, this script requires git');
-  sh.exit(1);
-}
 // token: ${{ secrets.GITHUB_TOKEN }}
 const GITHUB_TOKEN = core.getInput('token')
 const branch_name = core.getInput('branch_name')
@@ -15,8 +12,21 @@ const user_email = core.getInput('user_email')
 const trigger_release = core.getInput('trigger_release')
 
 try {
-  sh.chmod('+x', 'main.sh')
-  sh.exec(`./main.sh ${repo_name.toString()} ${branch_name.toString()} ${user_name.toString()} ${user_email.toString()} ${trigger_release.toString()}`)
+  exec('chmod +x ./main.sh')
+
+  exec(`./main.sh ${repo_name.toString()} ${branch_name.toString()} ${user_name.toString()} ${user_email.toString()} ${trigger_release.toString()}`, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`error: ${error.message}`);
+      return;
+    }
+
+    if (stderr) {
+      console.error(`stderr: ${stderr}`);
+      return;
+    }
+    console.log(`stdout:\n${stdout}`);
+  });
+
 } catch (error) {
   core.setFailed(error.message)
 }
