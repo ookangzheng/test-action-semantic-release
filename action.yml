@@ -1,10 +1,10 @@
-name: "cb-semantic-release"
+name: "CB Semantic relese"
 description: "semantic release action"
+author: "ookangzheng"
 inputs:
   branch_name: # id of input
     description: "Current branch name"
     required: true
-    default: ""
   repo_name:
     description: "Current repo name"
     required: true
@@ -17,7 +17,7 @@ inputs:
   trigger_release:
     description: "Do you want to release"
     required: true
-    default: true
+    default: "false"
 outputs:
   time: # id of output
     description: "The time we greeted you"
