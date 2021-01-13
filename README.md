@@ -1,6 +1,6 @@
 # Semantic Release Action
 
-**This Action is deprecated** It was a nice learning experience, but there are more complete actions in the marketplace. 
+**This Action is deprecated** It was a nice learning experience, but there are more complete actions in the marketplace.
 
 
 [![GitHub Action](https://img.shields.io/badge/GitHub-Action-blue?style=for-the-badge)](https://github.com/features/actions)
@@ -12,8 +12,8 @@
 
 This action includes [semantic-release](https://github.com/semantic-release/semantic-release) cli tool with the following plugins pre-installed:
 
-* @semantic-release/npm 
-* @semantic-release/git 
+* @semantic-release/npm
+* @semantic-release/git
 * @semantic-release/changelog
 * @semantic-release/github
 
@@ -21,15 +21,6 @@ This action includes [semantic-release](https://github.com/semantic-release/sema
 
 On your GitHub Actions workflow file, add the following step:
 
-```yml
-steps:
-    uses: brpaz/action-semantic-release@v1
-```
-
-This will run the "semantic-release" command without arguments. 
-The action allows you to specify the following options:
-
-* dry_run: Indicates where you want to run semantic release in "dry-run" mode. Defaults to false.
 * install_plugins: Specify a list of [Semantic Release Plugins](https://semantic-release.gitbook.io/semantic-release/extending/plugins-list) to install. Note that some plugins might depend on libraries that are not present in this action.
 * branch: Specify the branch to release from. Defaults to "master"
 
