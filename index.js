@@ -12,11 +12,11 @@ const user_email = core.getInput('user_email')
 const trigger_release = core.getInput('trigger_release')
 
 try {
-  const chmod = spawn('chmod +x ./main.sh')
+  const chmod = spawn('chmod', ['+x', './main.sh'])
   chmod.stdout.on(data, data => console.log(data))
 
   const exec = spawn(
-    `./main.sh ${repo_name.toString()} ${branch_name.toString()} ${user_name.toString()} ${user_email.toString()} ${trigger_release.toString()} ${GITHUB_TOKEN.toString()}`
+    'bash', [`./main.sh ${repo_name.toString()} ${branch_name.toString()} ${user_name.toString()} ${user_email.toString()} ${trigger_release.toString()} ${GITHUB_TOKEN.toString()}`]
   )
 
   exec.stdout.on(data, data => console.log(data))
