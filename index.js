@@ -1,7 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 // const sh = require('shelljs');
-const { exec } = require('child_process');
+const { spawn } = require('child_process');
 
 // token: ${{ secrets.GITHUB_TOKEN }}
 const GITHUB_TOKEN = core.getInput('token')
@@ -12,20 +12,16 @@ const user_email = core.getInput('user_email')
 const trigger_release = core.getInput('trigger_release')
 
 try {
-  exec('chmod +x ./main.sh')
-  console.log(`./main.sh ${repo_name.toString()} ${branch_name.toString()} ${user_name.toString()} ${user_email.toString()} ${trigger_release.toString()} ${GITHUB_TOKEN.toString()}`)
+  const chmod = spawn('chmod +x ./main.sh')
+  chmod.stdout.on(data, data => console.log(data))
 
-  exec(`./main.sh ${repo_name.toString()} ${branch_name.toString()} ${user_name.toString()} ${user_email.toString()} ${trigger_release.toString()} ${GITHUB_TOKEN.toString()}`, (error, stdout, stderr) => {
-    if (error) {
-      console.error(`error: ${error.message}`);
-      return;
-    }
+  const exec = spawn(
+    `./main.sh ${repo_name.toString()} ${branch_name.toString()} ${user_name.toString()} ${user_email.toString()} ${trigger_release.toString()} ${GITHUB_TOKEN.toString()}`
+  )
 
-    if (stderr) {
-      console.error(`stderr: ${stderr}`);
-      return;
-    }
-    console.log(`stdout:\n${stdout}`);
+  exec.stdout.on(data, data => console.log(data))
+  exec.stderr.on('data', (data) => {
+    console.error(`stderr: ${data}`);
   });
 
 } catch (error) {
