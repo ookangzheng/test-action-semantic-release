@@ -1,7 +1,7 @@
-var core = require('@actions/core');
+const core = require('@actions/core');
 // const github = require('@actions/github');
 // const sh = require('shelljs');
-var child = require('child_process');
+const { spawn } = require('child_process');
 
 // token: ${{ secrets.GITHUB_TOKEN }}
 const GITHUB_TOKEN = core.getInput('token')
@@ -12,12 +12,12 @@ const user_email = core.getInput('user_email')
 const trigger_release = core.getInput('trigger_release')
 
 try {
-  const chmod = child.spawn('chmod', ['+x', './main.sh'])
+  const chmod = spawn('chmod', ['+x', './main.sh'])
   chmod.stdout.on('data', (data) => {
     console.log(`stdout: ${data}`);
   });
 
-  const exec = child.spawn(
+  const exec = spawn(
     `./main.sh ${repo_name.toString()} ${branch_name.toString()} ${user_name.toString()} ${user_email.toString()} ${trigger_release.toString()} ${GITHUB_TOKEN.toString()}`
   )
 
