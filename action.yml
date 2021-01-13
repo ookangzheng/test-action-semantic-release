@@ -18,6 +18,9 @@ inputs:
     description: "Do you want to release"
     required: true
     default: "false"
+  token:
+    description: "Github token"
+    required: true
 outputs:
   time: # id of output
     description: "The time we greeted you"

@@ -14,4 +14,4 @@ jobs:
           repo_name: ${{ github.event.repository.name }}
           user_name: ${{ github.actor }}
           trigger_release: "true"
-          token: ${{ secret.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
