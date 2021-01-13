@@ -2,7 +2,7 @@
   "name": "github-action-semantic-release",
   "version": "1.0.0",
   "description": "Github Action - Semantic release",
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
     "build": "ncc build index.js",
     "clean-all": "npx lerna exec 'rm -rf node_modules dist'"

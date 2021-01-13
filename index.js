@@ -1,4 +1,4 @@
-const core = require('@actions/core');
+var core = require('@actions/core');
 // const github = require('@actions/github');
 // const sh = require('shelljs');
 var child = require('child_process');
