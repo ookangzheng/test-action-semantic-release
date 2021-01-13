@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 REPO_NAME=$1
 BRANCH_NAME=$2
