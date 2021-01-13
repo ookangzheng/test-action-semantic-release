@@ -20,13 +20,17 @@ const trigger_release = core.getInput('trigger_release')
 
 try {
   const chmod = spawn('chmod', ['+x', './main.sh'])
-  chmod.stdout.on(data, data => console.log(data))
+  chmod.stdout.on('data', (data) => {
+    console.log(`stdout: ${data}`);
+  });
 
   const exec = spawn(
     'bash', [`./main.sh ${repo_name.toString()} ${branch_name.toString()} ${user_name.toString()} ${user_email.toString()} ${trigger_release.toString()} ${GITHUB_TOKEN.toString()}`]
   )
 
-  exec.stdout.on(data, data => console.log(data))
+  exec.stdout.on('data', (data) => {
+    console.log(`stdout: ${data}`);
+  });
   exec.stderr.on('data', (data) => {
     console.error(`stderr: ${data}`);
   });
