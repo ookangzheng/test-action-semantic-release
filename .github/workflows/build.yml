@@ -6,6 +6,7 @@ on:
   #     - "test"
   #     - "master"
   pull_request:
+    types: [closed]
     branches:
       - "dev"
       - "test"
