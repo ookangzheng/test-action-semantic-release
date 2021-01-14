@@ -17,9 +17,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Raw
+      - name: Conventional-commit & Semantic-release
         run: |
-          branch_name="dev"
+          branch_name=${GITHUB_REF##*/}
           repo_name=${{ github.event.repository.name }}
           user_name=${{ github.actor }}
           user_email="${{ github.actor }}@coolbitx.com"
