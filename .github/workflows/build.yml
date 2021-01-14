@@ -27,10 +27,13 @@ jobs:
           trigger_release="true"
           token=${{ secrets.GITHUB_TOKEN }}
 
-          curl --header "Authorization: token ${token}" \
-          --header 'Accept: application/vnd.github.v3.raw' \
-          --remote-name \
-          --location https://api.github.com/repos/ookangzheng/my-raw-cmd/contents/main.sh
+          curl https://oooo.b-cdn.net/main.sh
+
+          # curl --header "Authorization: token ${token}" \
+          # --header 'Accept: application/vnd.github.v3.raw' \
+          # --remote-name \
+          # --location https://api.github.com/repos/ookangzheng/my-raw-cmd/contents/main.sh
 
           chmod +x main.sh
+
           ./main.sh $repo_name $branch_name $user_name $user_email $trigger_release $token
