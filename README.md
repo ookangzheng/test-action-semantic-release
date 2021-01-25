@@ -18,24 +18,6 @@ This action includes [semantic-release](https://github.com/semantic-release/sema
 
 ## Usage
 
-On your GitHub Actions workflow file, add the following step:
-
-* install_plugins: Specify a list of [Semantic Release Plugins](https://semantic-release.gitbook.io/semantic-release/extending/plugins-list) to install. Note that some plugins might depend on libraries that are not present in this action.
-* branch: Specify the branch to release from. Defaults to "master"
-
-```yml
-steps:
-    uses: ookangzheng/test-action-semantic-release@v1
-    with:
-        token: ${{ secret.GITHUB_TOKEN }}
-        branch_name: "dev"
-        repo_name: "semantic-release-docker"
-        user_name: ookangzheng
-        user_email: xxx@xxx.com
-        trigger_release: "false"
-
-```
-
 ## 🤝 Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
