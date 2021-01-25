@@ -10,8 +10,6 @@ const _ = require('lodash')
 const resolve = require('path').resolve
 const Readable = require('stream').Readable
 const rimraf = require('rimraf')
-
-
 const cli = meow(`
   Usage
     standard-changelog
@@ -152,7 +150,6 @@ if (options.append) {
     })
 } else {
   const tmp = tempfile()
-
   changelogStream
     .pipe(addStream(readStream))
     .pipe(fs.createWriteStream(tmp))
