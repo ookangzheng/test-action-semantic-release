@@ -15,9 +15,6 @@ This action includes [semantic-release](https://github.com/semantic-release/sema
 * @semantic-release/git
 * @semantic-release/changelog
 * @semantic-release/github
-
-## Usage
-
 ## 🤝 Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
