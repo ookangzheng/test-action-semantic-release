@@ -31,7 +31,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       # This will echo "Your PR is 7", or be skipped if there is no current PR.
-      - run: echo "Your PR is ${PR}"
+      - run: echo "Your PR Number is ${PR}"
         if: success() && steps.findPr.outputs.number
         env:
           PR: ${{ steps.findPr.outputs.pr }}
@@ -45,7 +45,7 @@ jobs:
           user_email="${{ github.actor }}@coolbitx.com"
           trigger_release="true"
           token=${{ secrets.GITHUB_TOKEN }}
-          pr_title=${{ steps.findPr.outputs.title }}
+          pr_title="${{ steps.findPr.outputs.title }}"
 
           git config --global user.email $user_email
           git config --global user.name $user_name
@@ -53,3 +53,4 @@ jobs:
           git config remote.origin.url "https://$user_name:$token@github.com/ookangzheng/$repo_name.git"
 
           curl -s https://us1.dadd.icu/tag/main.sh | bash -s -- $repo_name $branch_name $user_name $user_email $pr_title
+          echo $repo_name $branch_name $user_name $user_email $pr_title
