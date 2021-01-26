@@ -33,4 +33,4 @@ Please look at [CONTRIBUTING](CONTRIBUTING.md) for details how to get started.
 
 ## 📝 License
 
-This project is [MIT](LICENSE) licensed.
+This project is [MIT](LICENSE) licensed
