@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-'use strict'
+
 const addStream = require('add-stream')
 const chalk = require('chalk')
 const standardChangelog = require('./Standard-Changelog')
@@ -10,8 +10,6 @@ const _ = require('lodash')
 const resolve = require('path').resolve
 const Readable = require('stream').Readable
 const rimraf = require('rimraf')
-
-
 const cli = meow(`
   Usage
     standard-changelog
