@@ -6,13 +6,6 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 [![GitHub Actions](https://github.com/brpaz/action-semantic-release/workflows/CI/badge.svg?style=for-the-badge)](https://github.com/brpaz/action-semantic-release/actions)
 
-
-## What is included
-
-cli tool with the following plugins pre-installed:
-
-* @semantic-release/npm
-
 ## Usage
 
 On your GitHub Actions workflow file, add the following step:
