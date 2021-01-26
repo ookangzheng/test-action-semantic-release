@@ -9,12 +9,9 @@
 
 ## What is included
 
-This action includes [semantic-release](https://github.com/semantic-release/semantic-release) cli tool with the following plugins pre-installed:
+cli tool with the following plugins pre-installed:
 
 * @semantic-release/npm
-* @semantic-release/git
-* @semantic-release/changelog
-* @semantic-release/github
 
 ## Usage
 
