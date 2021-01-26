@@ -1,4 +1,4 @@
-# Semantic Release Action
+# Semantic Release Action - SYG-123
 
 **This Action is deprecated** It was a nice learning experience, but there are more complete actions in the marketplace.
 
