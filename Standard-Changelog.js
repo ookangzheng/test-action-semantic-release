@@ -22,11 +22,10 @@ conventionalChangelog.createIfMissing = function (infile) {
     }
   }
 }
-
 conventionalChangelog.checkpoint = function (msg, args) {
   console.info(chalk.green(figures.tick) + ' ' + sprintf(msg, args.map(function (arg) {
     return chalk.bold(arg)
   })))
 }
 
-module.exports = conventionalChangelog
+// module.exports = conventionalChangelog
