@@ -4,7 +4,6 @@
 
 [![GitHub Action](https://img.shields.io/badge/GitHub-Action-blue?style=for-the-badge)](https://github.com/features/actions)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
-[![GitHub Actions](https://github.com/brpaz/action-semantic-release/workflows/CI/badge.svg?style=for-the-badge)](https://github.com/brpaz/action-semantic-release/actions)
 
 ## Usage
 
@@ -22,7 +21,6 @@ steps:
         user_name: ookangzheng
         user_email: xxx@xxx.com
         trigger_release: "false"
-
 ```
 
 ## 🤝 Contributing
