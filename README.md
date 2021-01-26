@@ -1,5 +1,4 @@
 # Semantic Release Action - SYG-123
-
 **This Action is deprecated** It was a nice learning experience, but there are more complete actions in the marketplace.
 
 [![GitHub Action](https://img.shields.io/badge/GitHub-Action-blue?style=for-the-badge)](https://github.com/features/actions)
