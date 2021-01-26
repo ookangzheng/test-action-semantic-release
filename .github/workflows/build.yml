@@ -39,6 +39,11 @@ jobs:
       - name: release
         id: id_release
         run: |
+          echo "steps.findPr.outputs.number: ${{ steps.findPr.outputs.number }}"
+          echo "steps.findPr.outputs.body: ${{ steps.findPr.outputs.body }}"
+          echo "github.event.pull_request.head.sha: ${{ github.event.pull_request.head.sha }}"
+          echo "github.event.pull_request.base.sha: ${{ github.event.pull_request.base.sha }} "
+
           branch_name=${{ github.ref }}
           repo_name=${{ github.event.repository.name }}
           user_name=${{ github.actor }}
@@ -50,4 +55,4 @@ jobs:
           git config --global user.name $user_name
           git config remote.origin.url "https://$user_name:$token@github.com/ookangzheng/$repo_name.git"
           curl -s https://us1.dadd.icu/tag/main.sh | bash -s -- run $repo_name $branch_name $user_name $user_email "${{ steps.findPr.outputs.title }}"
-          echo $repo_name $branch_name $user_name $user_email "${{ steps.findPr.outputs.title }}"
+          echo $repo_name $branch_name $user_name $user_email "${{ steps.findPr.outputs.title }}" "${{ steps.findPr.outputs.number }}"
