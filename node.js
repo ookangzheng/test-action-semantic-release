@@ -7,12 +7,9 @@ const commitsArray = output.split('----DELIMITER----\n').map(commit => {
   return { sha, message };
 }).filter(commit => Boolean(commit.sha))
 console.log({ commitsArray });
-// const version = require("./package.json".version)
-// const currentVersion = version
+
 const changeLogPath = "./LOG.md"
 const allTag = child.execSync(`git tag --list --sort=-version:refname "*" | head -n 2`).toString('utf-8').split("\n")
-
-
 
 //git log $(git describe --abbrev=0 --tags $(git describe --abbrev=0)^)...$(git describe --abbrev=0)
 // allTag.split("\n").slice(0, 1)
