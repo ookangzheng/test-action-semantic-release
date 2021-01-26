@@ -7,10 +7,6 @@
 
 ## Usage
 
-On your GitHub Actions workflow file, add the following step:
-
-* install_plugins: Specify a list of [Semantic Release Plugins](https://semantic-release.gitbook.io/semantic-release/extending/plugins-list) to install. Note that some plugins might depend on
-
 ```yml
 steps:
     uses: ookangzheng/test-action-semantic-release@v1
