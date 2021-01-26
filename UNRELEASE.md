@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Angular conventional commit message format](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#commit)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.1.0-alpha.5](https://github.com/ookangzheng/test-action-semantic-release/compare/v0.1.0-alpha.4...v0.1.0-alpha.5) 
+
+> 26 January 2021 
+
+### Merged
+
+- fix: SYG-126 aa [`#23`](https://github.com/ookangzheng/test-action-semantic-release/pull/23)
+
+- Merge pull request #23 from ookangzheng/SYG-126 [`#SYG-126`](https://coolbitx.atlassian.net/browse/SYG-126) [`#SYG-126`](https://coolbitx.atlassian.net/browse/SYG-126)
+
 ## [v0.1.0-alpha.4](https://github.com/ookangzheng/test-action-semantic-release/compare/v0.1.0-alpha.3...v0.1.0-alpha.4) 
 
 > 26 January 2021 
@@ -13,6 +23,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - feat: SYG-126 [`#22`](https://github.com/ookangzheng/test-action-semantic-release/pull/22)
 
 - Merge pull request #22 from ookangzheng/SYG-126 [`#SYG-126`](https://coolbitx.atlassian.net/browse/SYG-126) [`#SYG-126`](https://coolbitx.atlassian.net/browse/SYG-126)
+- feat: SYG-126 [`#SYG-126`](https://coolbitx.atlassian.net/browse/SYG-126)
+
+- chore: CHANGELOG [`6bb60ee`](https://github.com/ookangzheng/test-action-semantic-release/commit/6bb60ee6f05d9c61272afb63610a87e05cc3a0f4)
 
 ## [v0.1.0-alpha.3](https://github.com/ookangzheng/test-action-semantic-release/compare/v0.1.0-alpha.2...v0.1.0-alpha.3) 
 
