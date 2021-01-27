@@ -39,8 +39,7 @@ jobs:
       - name: release
         id: id_release
         run: |
-
-          "echo branch: $(git rev-parse --abbrev-ref HEAD)"
+          echo "branch: $(git rev-parse --abbrev-ref HEAD)"
           # echo "git fetch..."
           # git fetch --all --tags
 
