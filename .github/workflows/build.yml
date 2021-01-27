@@ -47,11 +47,11 @@ jobs:
           echo "git describe ...."
           git describe --tags `git rev-list --tags --max-count=1`
 
-          echo "git log ...."
-          git log
-
           echo "git pretty...."
-          git log -pretty=format:"%h %s" --date=short
+          git log --pretty=format:"%h %s" --date=short
+
+          echo "git all...."
+          git log 1.0.0-alpha2..HEAD --no-merges --pretty=format:"%h %s" --date=short
 
           # echo "steps.findPr.outputs.number: ${{ steps.findPr.outputs.number }}"
           # echo "steps.findPr.outputs.body: ${{ steps.findPr.outputs.body }}"
