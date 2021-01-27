@@ -1,8 +1,8 @@
 name: "CI"
 on:
-  # push:
-  #   branches:
-  #     - "dev"
+  push:
+    branches:
+      - "dev"
   #     - "test"
   #     - "master"
   pull_request:
@@ -39,6 +39,10 @@ jobs:
       - name: release
         id: id_release
         run: |
+          git describe --tags `git rev-list --tags --max-count=1`
+
+          git log 1.0.0-alpha2..HEAD --no-merges --pretty=format:"%h %s" --date=short
+
           echo "steps.findPr.outputs.number: ${{ steps.findPr.outputs.number }}"
           echo "steps.findPr.outputs.body: ${{ steps.findPr.outputs.body }}"
           echo "github.event.pull_request.head.sha: ${{ github.event.pull_request.head.sha }}"
