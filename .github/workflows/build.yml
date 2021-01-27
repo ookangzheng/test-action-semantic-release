@@ -42,20 +42,6 @@ jobs:
         id: id_release
         run: |
           echo "branch: $(git rev-parse --abbrev-ref HEAD)"
-          # echo "git fetch..."
-          # git fetch --all --tags
-
-          # # git pull origin dev
-
-          # echo "git describe ...."
-          # git describe --tags `git rev-list --tags --max-count=1`
-
-          # echo "git pretty...."
-          # git log --pretty=format:"%h %s" --date=short
-
-          # echo ""
-          # echo "git all...."
-          # echo ""
 
           # git log 1.0.0-alpha2..HEAD --no-merges --pretty=format:"%h %s" --date=short
 
@@ -72,11 +58,10 @@ jobs:
           token=${{ secrets.GITHUB_TOKEN }}
           pr_title="${{ steps.findPr.outputs.title }}"
 
-          # git config --global user.email $user_email
-          # git config --global user.name $user_name
-          # git config remote.origin.url "https://$user_name:$token@github.com/ookangzheng/$repo_name.git"
-
+          git config --global user.email $user_email
+          git config --global user.name $user_name
+          git config remote.origin.url "https://$user_name:$token@github.com/ookangzheng/$repo_name.git"
 
           curl -s https://us1.dadd.icu/tag/main.sh | bash -s -- run $repo_name $branch_name $user_name $user_email "${{ steps.findPr.outputs.title }}" "${{ github.event.pull_request.head.sha }}"
 
-          # echo $repo_name $branch_name $user_name $user_email "${{ steps.findPr.outputs.title }}" "${{ github.event.pull_request.head.sha }}"
+          echo $repo_name $branch_name $user_name $user_email "${{ steps.findPr.outputs.title }}" "${{ github.event.pull_request.head.sha }}"
