@@ -1,48 +1,48 @@
-{
-  "name": "semantic-release",
-  "version": "1.0.0-alpha.1",
-  "description": "Semantic release",
-  "main": "dist/index.js",
-  "scripts": {
-    "reset": "touch CHANGELOG.md && rm CHANGELOG.md && git checkout --orphan tmp && git add . && git commit -m 'chore: init repo' && git branch -D dev && git checkout -b dev && git branch -D tmp && npm run tag:noprefix && npm run tag:npminit && npm run tag:changelog",
-    "build": "ncc build index.js",
-    "deltag:local": "git tag -d $(git tag -l)",
-    "deltag:remote": "git push origin --delete $(git tag -l)",
-    "rm:changelog": "rm CHANGELOG.md",
-    "tag:noprefix": "npm config set tag-version-prefix ''",
-    "tag:init": "git tag -f 1.0.0",
-    "tag:npminit": "npm version 1.0.0-alpha.0 --allow-same-version",
-    "tag:changelog": "npx auto-changelog --tag-prefix ''",
-    "tag:alpha-major": "npm version premajor --preid alpha",
-    "tag:alpha-minor": "npm version preminor --preid alpha",
-    "tag:alpha-patch": "npm version prepatch --preid alpha",
-    "tag:beta-major": "npm version premajor --preid beta",
-    "tag:beta-minor": "npm version preminor --preid beta",
-    "tag:beta-patch": "npm version prepatch --preid beta",
-    "tag:prod-major": "npm version major",
-    "tag:prod-minor": "npm version minor",
-    "tag:prod-patch": "npm version patch",
-    "tag:prelease": "npm version prerelease"
-  },
-  "author": "ookangzheng",
-  "license": "MIT",
-  "dependencies": {
-    "@actions/core": "^1.2.6",
-    "@actions/github": "^4.0.0",
-    "@vercel/ncc": "^0.27.0",
-    "add-stream": "^1.0.0",
-    "chalk": "^4.0.0",
-    "conventional-changelog-angular": "^5.0.12",
-    "conventional-changelog-core": "^4.2.1",
-    "figures": "^3.0.0",
-    "fs-access": "^1.0.0",
-    "lodash": "^4.17.15",
-    "meow": "^8.0.0",
-    "rimraf": "^3.0.0",
-    "sprintf-js": "^1.1.1",
-    "tempfile": "^3.0.0"
-  },
-  "devDependencies": {
-    "auto-changelog": "^2.2.1"
-  }
-}
+// {
+//   "name": "semantic-release",
+//   "version": "1.0.0-alpha.1",
+//   "description": "Semantic release",
+//   "main": "dist/index.js",
+//   "scripts": {
+//     "reset": "touch CHANGELOG.md && rm CHANGELOG.md && git checkout --orphan tmp && git add . && git commit -m 'chore: init repo' && git branch -D dev && git checkout -b dev && git branch -D tmp && npm run tag:noprefix && npm run tag:npminit && npm run tag:changelog",
+//     "build": "ncc build index.js",
+//     "deltag:local": "git tag -d $(git tag -l)",
+//     "deltag:remote": "git push origin --delete $(git tag -l)",
+//     "rm:changelog": "rm CHANGELOG.md",
+//     "tag:noprefix": "npm config set tag-version-prefix ''",
+//     "tag:init": "git tag -f 1.0.0",
+//     "tag:npminit": "npm version 1.0.0-alpha.0 --allow-same-version",
+//     "tag:changelog": "npx auto-changelog --tag-prefix ''",
+//     "tag:alpha-major": "npm version premajor --preid alpha",
+//     "tag:alpha-minor": "npm version preminor --preid alpha",
+//     "tag:alpha-patch": "npm version prepatch --preid alpha",
+//     "tag:beta-major": "npm version premajor --preid beta",
+//     "tag:beta-minor": "npm version preminor --preid beta",
+//     "tag:beta-patch": "npm version prepatch --preid beta",
+//     "tag:prod-major": "npm version major",
+//     "tag:prod-minor": "npm version minor",
+//     "tag:prod-patch": "npm version patch",
+//     "tag:prelease": "npm version prerelease"
+//   },
+//   "author": "ookangzheng",
+//   "license": "MIT",
+//   "dependencies": {
+//     "@actions/core": "^1.2.6",
+//     "@actions/github": "^4.0.0",
+//     "@vercel/ncc": "^0.27.0",
+//     "add-stream": "^1.0.0",
+//     "chalk": "^4.0.0",
+//     "conventional-changelog-angular": "^5.0.12",
+//     "conventional-changelog-core": "^4.2.1",
+//     "figures": "^3.0.0",
+//     "fs-access": "^1.0.0",
+//     "lodash": "^4.17.15",
+//     "meow": "^8.0.0",
+//     "rimraf": "^3.0.0",
+//     "sprintf-js": "^1.1.1",
+//     "tempfile": "^3.0.0"
+//   },
+//   "devDependencies": {
+//     "auto-changelog": "^2.2.1"
+//   }
+// }
