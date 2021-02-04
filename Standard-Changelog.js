@@ -15,11 +15,11 @@ const accessSync = require('fs-access').sync
 // //   try {
 // //     accessSync(infile, fs.F_OK)
 // //   } catch (err) {
-// //     if (err.code === 'ENOENT') {
-// //       conventionalChangelog.checkpoint('created %s', [infile])
-// //       fs.writeFileSync(infile, '\n', 'utf-8')
-// //     }
-// //   }
+//     if (err.code === 'ENOENT') {
+//       conventionalChangelog.checkpoint('created %s', [infile])
+//       fs.writeFileSync(infile, '\n', 'utf-8')
+//     }
+//   }
 // // }
 // // conventionalChangelog.checkpoint = function (msg, args) {
 console.info(chalk.green(figures.tick) + ' ' + sprintf(msg, args.map(function (arg) {
