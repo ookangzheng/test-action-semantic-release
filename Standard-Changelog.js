@@ -1,15 +1,15 @@
-// const conventionalChangelogCore = require('conventional-changelog-core')
-// const angular = require('conventional-changelog-angular')
-// const fs = require('fs')
-// const accessSync = require('fs-access').sync
-// const chalk = require('chalk')
-// const figures = require('figures')
-// const sprintf = require('sprintf-js').sprintf
-// function conventionalChangelog(options, context, gitRawCommitsOpts, parserOpts, writerOpts) {
-//   options = options || {}
-//   options.config = angular
-//   return conventionalChangelogCore(options, context, gitRawCommitsOpts, parserOpts, writerOpts)
-// }
+const conventionalChangelogCore = require('conventional-changelog-core')
+const angular = require('conventional-changelog-angular')
+const fs = require('fs')
+const accessSync = require('fs-access').sync
+const chalk = require('chalk')
+const figures = require('figures')
+const sprintf = require('sprintf-js').sprintf
+function conventionalChangelog(options, context, gitRawCommitsOpts, parserOpts, writerOpts) {
+  options = options || {}
+  options.config = angular
+  return conventionalChangelogCore(options, context, gitRawCommitsOpts, parserOpts, writerOpts)
+}
 
 // conventionalChangelog.createIfMissing = function (infile) {
 //   try {
