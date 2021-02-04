@@ -11,7 +11,7 @@
 //   return conventionalChangelogCore(options, context, gitRawCommitsOpts, parserOpts, writerOpts)
 // }
 // asdfasdf
-// // conventionalChangelog.createIfMissing = function (infile) {
+// conventionalChangelog.createIfMissing = function (infile) {
 // //   try {
 // //     accessSync(infile, fs.F_OK)
 // //   } catch (err) {
@@ -22,9 +22,9 @@
 // //   }
 // // }
 // // conventionalChangelog.checkpoint = function (msg, args) {
-// //   console.info(chalk.green(figures.tick) + ' ' + sprintf(msg, args.map(function (arg) {
-// //     return chalk.bold(arg)
-// //   })))
-// // }
+console.info(chalk.green(figures.tick) + ' ' + sprintf(msg, args.map(function (arg) {
+  return chalk.bold(arg)
+})))
+}
 
-// // // module.exports = conventionalChangelog
+// module.exports = conventionalChangelog
