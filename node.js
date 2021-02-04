@@ -87,23 +87,23 @@
 //     console.error(err)
 //   }
 
-// }
+}
 
 
-// function writeLog(changeLogPath) {
-//   try {
-//     if (fs.existsSync(changeLogPath)) {
-//       writeLog(changeLogPath)
+function writeLog(changeLogPath) {
+  try {
+    if (fs.existsSync(changeLogPath)) {
+      writeLog(changeLogPath)
 
-//       const currentChangelog = fs.readFileSync(changeLogPath, "utf-8")
-fs.writeFileSync(changeLogPath, `${newChangelog}${currentChangelog}`);
+      const currentChangelog = fs.readFileSync(changeLogPath, "utf-8")
+      fs.writeFileSync(changeLogPath, `${newChangelog}${currentChangelog}`);
     } else {
-  fs.appendFileSync(changeLogPath, "", { encoding: "utf-8", flag: 'w' })
-  writeLog(changeLogPath)
-}
+      fs.appendFileSync(changeLogPath, "", { encoding: "utf-8", flag: 'w' })
+      writeLog(changeLogPath)
+    }
   } catch (err) {
-  console.error(err)
-}
+    console.error(err)
+  }
 }
 
 function checkFile(changeLogPath) {
