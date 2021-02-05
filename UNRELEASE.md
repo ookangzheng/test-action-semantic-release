@@ -1,4 +1,15 @@
 
+## [1.0.4-alpha.1]
+> 2021-02-05
+
+[1cb2cf1](https://github.com/ookangzheng/test-action-semantic-release/commit/1cb2cf1) fix: [SYG-002](https://coolbitx.atlassian.net/browse/SYG-002)   cccc
+
+[d47666c](https://github.com/ookangzheng/test-action-semantic-release/commit/d47666c) fix: [SYG-002](https://coolbitx.atlassian.net/browse/SYG-002)   bb
+
+
+[1.0.4-alpha.1]: https://github.com/ookangzheng/test-action-semantic-release/releases/tag/1.0.4-alpha.1
+
+
 ## [1.0.3-alpha.1]
 > 2021-02-05
 
