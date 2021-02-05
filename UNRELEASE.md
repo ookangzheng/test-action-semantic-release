@@ -1,4 +1,13 @@
 
+## [1.0.3-alpha.1]
+> 2021-02-05
+
+[8c2afed](https://github.com/ookangzheng/test-action-semantic-release/commit/8c2afed) fix: [SYG-001](https://coolbitx.atlassian.net/browse/SYG-001)   abc
+
+
+[1.0.3-alpha.1]: https://github.com/ookangzheng/test-action-semantic-release/releases/tag/1.0.3-alpha.1
+
+
 ## [1.0.2-alpha.1]
 > 2021-02-05
 
