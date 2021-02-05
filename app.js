@@ -151,15 +151,15 @@
 // } else {
 //   const tmp = tempfile()
 
-//   changelogStream
-//     .pipe(addStream(readStream))
-//     .pipe(fs.createWriteStream(tmp))
-//     .on('finish', function () {
-//       fs.createReadStream(tmp)
-//         .pipe(fs.createWriteStream(outfile))
-//         .on('finish', function () {
-//           standardChangelog.checkpoint('output changes to %s', [outfile])
-//           rimraf.sync(tmp)
-//         })
-//     })
-// }
+changelogStream
+  .pipe(addStream(readStream))
+  .pipe(fs.createWriteStream(tmp))
+  .on('finish', function () {
+    fs.createReadStream(tmp)
+      .pipe(fs.createWriteStream(outfile))
+      .on('finish', function () {
+        standardChangelog.checkpoint('output changes to %s', [outfile])
+        rimraf.sync(tmp)
+      })
+  })
+}
