@@ -1,4 +1,17 @@
 
+## [1.0.4-beta.1]
+> 2021-02-05
+
+[2bdbb62](https://github.com/ookangzheng/test-action-semantic-release/commit/2bdbb62) chore:   PRELEASE.md
+
+[182bcf7](https://github.com/ookangzheng/test-action-semantic-release/commit/182bcf7) chore:   PRELEASE.md
+
+[3988b9e](https://github.com/ookangzheng/test-action-semantic-release/commit/3988b9e) chore:   PRELEASE.md
+
+
+[1.0.4-beta.1]: https://github.com/ookangzheng/test-action-semantic-release/releases/tag/1.0.4-beta.1
+
+
 ## [1.0.3-beta.1]
 > 2021-02-05
 
