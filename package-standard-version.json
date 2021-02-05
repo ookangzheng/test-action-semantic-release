@@ -1,0 +1,53 @@
+// {
+//   "name": "semantic-release",
+//   "version": "0.0.1-beta.1",
+//   "description": "Semantic release",
+//   "main": "dist/index.js",
+//   "scripts": {
+//     "reset": "touch CHANGELOG.md && rm CHANGELOG.md && git checkout --orphan tmp && git add . && git commit -m 'init' && git branch -D dev && git checkout -b dev && git branch -D tmp && npm run tag:noprefix",
+//     "tag:init": "git tag -f 0.0.0",
+//     "tag:npminit": "npm version 0.0.0-alpha.0 --allow-same-version",
+//     "deltag:local": "git tag -d $(git tag -l)",
+//     "deltag:remote": "git push origin --delete $(git tag -l)",
+//     "build": "ncc build index.js",
+//     "chglog:init": "chglog init",
+//     "chglog:gen": "chglog format --template repo > RELEASE.md",
+//     "change:init": "change init",
+//     "change:gen": "change",
+//     "clean-all": "npx lerna exec 'rm -rf node_modules dist'",
+//     "release:dev": "npx standard-version --prerelease alpha -t '' && npx auto-changelog --tag-prefix ''",
+//     "release:test": "npx standard-version --prerelease beta -t '' && npx auto-changelog --tag-prefix ''",
+//     "release:prod": "npx standard-version --skip.changelog -t '' && npx auto-changelog --tag-prefix '' ",
+//     "tag:noprefix": "npm config set tag-version-prefix ''",
+//     "rm:changelog": "rm CHANGELOG.md"
+//   },
+//   "author": "ookangzheng",
+//   "license": "MIT",
+//   "dependencies": {
+//     "@actions/core": "^1.2.6",
+//     "@actions/github": "^4.0.0",
+//     "@vercel/ncc": "^0.27.0",
+//     "add-stream": "^1.0.0",
+//     "chalk": "^4.0.0",
+//     "conventional-changelog-angular": "^5.0.12",
+//     "conventional-changelog-core": "^4.2.1",
+//     "figures": "^3.0.0",
+//     "fs-access": "^1.0.0",
+//     "lodash": "^4.17.15",
+//     "meow": "^8.0.0",
+//     "rimraf": "^3.0.0",
+//     "sprintf-js": "^1.1.1",
+//     "tempfile": "^3.0.0"
+//   },
+//   "devDependencies": {
+//     "auto-changelog": "^2.2.1"
+//   },
+//   "auto-changelog": {
+//     "issueUrl": "https://coolbitx.atlassian.net/browse/{id}",
+//     "issuePattern": "[A-Z]+-\\d+",
+//     "output": "CHANGELOG.md",
+//     "template": "keepachangelog",
+//     "unreleased": true,
+//     "commitLimit": false
+//   }
+// }
