@@ -1,4 +1,13 @@
 
+## [1.0.2-alpha.1]
+> 2021-02-05
+
+[638853a](https://github.com/ookangzheng/test-action-semantic-release/commit/638853a) fix: [SYG-111](https://coolbitx.atlassian.net/browse/SYG-111)   bbb
+
+
+[1.0.2-alpha.1]: https://github.com/ookangzheng/test-action-semantic-release/releases/tag/1.0.2-alpha.1
+
+
 ## [1.0.1-alpha.2]
 > 2021-02-05
 
