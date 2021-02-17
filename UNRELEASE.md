@@ -1,4 +1,17 @@
 
+## [1.0.5-alpha.1]
+> 2021-02-17
+
+[a97dbf7](https://github.com/ookangzheng/test-action-semantic-release/commit/a97dbf7) fix: [SYG-002](https://coolbitx.atlassian.net/browse/SYG-002)   remove pr title 123
+
+[3003ede](https://github.com/ookangzheng/test-action-semantic-release/commit/3003ede) fix: [SYG-002](https://coolbitx.atlassian.net/browse/SYG-002)   remove pr title
+
+[57a3462](https://github.com/ookangzheng/test-action-semantic-release/commit/57a3462) fix: [SYG-002](https://coolbitx.atlassian.net/browse/SYG-002)   ABc
+
+
+[1.0.5-alpha.1]: https://github.com/ookangzheng/test-action-semantic-release/releases/tag/1.0.5-alpha.1
+
+
 ## [1.0.4-alpha.1]
 > 2021-02-05
 
