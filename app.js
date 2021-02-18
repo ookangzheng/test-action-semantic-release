@@ -1,15 +1,15 @@
 // #!/usr/bin/env node
 
-// const addStream = require('add-stream')
-// const chalk = require('chalk')
-// const standardChangelog = require('./Standard-Changelog')
-// const fs = require('fs')
-// const meow = require('meow')
-// const tempfile = require('tempfile')
-// const _ = require('lodash')
-// const resolve = require('path').resolve
-// const Readable = require('stream').Readable
-// const rimraf = require('rimraf')
+const addStream = require('add-stream')
+const chalk = require('chalk')
+const standardChangelog = require('./Standard-Changelog')
+const fs = require('fs')
+const meow = require('meow')
+const tempfile = require('tempfile')
+const _ = require('lodash')
+const resolve = require('path').resolve
+const Readable = require('stream').Readable
+const rimraf = require('rimraf')
 // const cli = meow(`
 //   Usage
 //     standard-changelog
