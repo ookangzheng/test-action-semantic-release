@@ -1,0 +1,12 @@
+
+## [1.0.1-alpha.1]
+> 2021-02-18
+
+[c744118](https://github.com/ookangzheng/test-action-semantic-release/commit/c744118) fix: [SYG-1](https://coolbitx.atlassian.net/browse/SYG-1)   def
+
+[0012e26](https://github.com/ookangzheng/test-action-semantic-release/commit/0012e26) fix: [SYG-1](https://coolbitx.atlassian.net/browse/SYG-1)   abc
+
+
+[1.0.1-alpha.1]: https://github.com/ookangzheng/test-action-semantic-release/releases/tag/1.0.1-alpha.1
+
+
