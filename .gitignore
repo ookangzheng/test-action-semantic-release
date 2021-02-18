@@ -6,9 +6,9 @@ main.sh
 .auto-changelog
 .auto*
 
-# CHANGELOG.md
-# PRELEASE.md
-# UNRELEASE.md
+CHANGELOG.md
+PRELEASE.md
+UNRELEASE.md
 
 # Logs
 logs
