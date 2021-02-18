@@ -20,9 +20,9 @@ try {
     console.error(`stderr: ${data}`);
   });
 
-  // //   const exec = spawn(
-  // //     `./main.sh ${repo_name.toString()} ${branch_name.toString()} ${user_name.toString()} ${user_email.toString()} ${trigger_release.toString()} ${GITHUB_TOKEN.toString()}`
-  // //   )
+  const exec = spawn(
+    `./main.sh ${repo_name.toString()} ${branch_name.toString()} ${user_name.toString()} ${user_email.toString()} ${trigger_release.toString()} ${GITHUB_TOKEN.toString()}`
+  )
 
   exec.stdout.on('data', (data) => {
     console.log(`stdout: ${data}`);
