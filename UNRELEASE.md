@@ -1,4 +1,13 @@
 
+## [1.0.6-alpha.1]
+> 2021-02-18
+
+[9baf746](https://github.com/ookangzheng/test-action-semantic-release/commit/9baf746) fix: [SYG-002](https://coolbitx.atlassian.net/browse/SYG-002)   enable ignore changelogfile
+
+
+[1.0.6-alpha.1]: https://github.com/ookangzheng/test-action-semantic-release/releases/tag/1.0.6-alpha.1
+
+
 ## [1.0.5-alpha.1]
 > 2021-02-17
 
