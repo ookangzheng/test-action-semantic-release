@@ -1,7 +1,7 @@
 // // const core = require('@actions/core');
-// // // const github = require('@actions/github');
-// // // const sh = require('shelljs');
-// // const { spawn } = require('child_process');
+const github = require('@actions/github');
+const sh = require('shelljs');
+const { spawn } = require('child_process');
 
 // // // token: ${{ secrets.GITHUB_TOKEN }}
 // // const GITHUB_TOKEN = core.getInput('token')
