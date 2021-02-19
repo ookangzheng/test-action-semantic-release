@@ -89,10 +89,10 @@ const rimraf = require('rimraf')
 // const append = flags.append
 // const releaseCount = flags.firstRelease ? 0 : flags.releaseCount
 
-// const options = _.omitBy({
-//   preset: flags.preset,
-//   pkg: {
-//     path: flags.pkg
+ const options = _.omitBy({
+   preset: flags.preset,
+   pkg: {
+     path: flags.pkg
 //   },
 //   append: append,
 //   releaseCount: releaseCount,
