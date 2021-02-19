@@ -93,8 +93,7 @@ const rimraf = require('rimraf')
    preset: flags.preset,
    pkg: {
      path: flags.pkg
-//   },
-//   append: append,
+   },
 //   releaseCount: releaseCount,
 //   lernaPackage: flags.lernaPackage
 // }, _.isUndefined)
