@@ -1,4 +1,13 @@
 
+## [3.0.0-alpha.1]
+> 2021-02-20
+
+[3813fe3](https://github.com/ookangzheng/test-action-semantic-release/commit/3813fe3) refactor!: [SYG-4](https://coolbitx.atlassian.net/browse/SYG-4)   bump version 3.0
+
+
+[3.0.0-alpha.1]: https://github.com/ookangzheng/test-action-semantic-release/releases/tag/3.0.0-alpha.1
+
+
 ## [2.0.1-alpha.1]
 > 2021-02-19
 
