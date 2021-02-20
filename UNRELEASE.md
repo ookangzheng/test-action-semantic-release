@@ -1,4 +1,13 @@
 
+## [3.0.0-alpha.2]
+> 2021-02-20
+
+[922e9bc](https://github.com/ookangzheng/test-action-semantic-release/commit/922e9bc) fix: [SYG-5](https://coolbitx.atlassian.net/browse/SYG-5)   xxx
+
+
+[3.0.0-alpha.2]: https://github.com/ookangzheng/test-action-semantic-release/releases/tag/3.0.0-alpha.2
+
+
 ## [3.0.0-alpha.1]
 > 2021-02-20
 
