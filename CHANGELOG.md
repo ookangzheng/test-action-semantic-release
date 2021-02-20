@@ -1,4 +1,34 @@
 
+## [3.0.0]
+> 2021-02-20
+
+
+
+[922e9bc](https://github.com/ookangzheng/test-action-semantic-release/commit/922e9bc) fix: [SYG-5](https://coolbitx.atlassian.net/browse/SYG-5)   xxx
+
+
+[3813fe3](https://github.com/ookangzheng/test-action-semantic-release/commit/3813fe3) refactor!: [SYG-4](https://coolbitx.atlassian.net/browse/SYG-4)   bump version 3.0
+
+
+
+
+[69cf340](https://github.com/ookangzheng/test-action-semantic-release/commit/69cf340) fix: [SYG-3](https://coolbitx.atlassian.net/browse/SYG-3)   xxx
+
+
+
+[8b9f925](https://github.com/ookangzheng/test-action-semantic-release/commit/8b9f925) refactor!: [SYG-3](https://coolbitx.atlassian.net/browse/SYG-3)   lets go
+
+
+
+[20e51a2](https://github.com/ookangzheng/test-action-semantic-release/commit/20e51a2) fix: [SYG-3](https://coolbitx.atlassian.net/browse/SYG-3)   bbbc
+
+
+[6432474](https://github.com/ookangzheng/test-action-semantic-release/commit/6432474) fix: [SYG-3](https://coolbitx.atlassian.net/browse/SYG-3)   bbb
+
+
+[3.0.0]: https://github.com/ookangzheng/test-action-semantic-release/releases/tag/3.0.0
+
+
 ## [2.0.1]
 > 2021-02-19
 
