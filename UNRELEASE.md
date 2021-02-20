@@ -1,4 +1,30 @@
 
+## [4.0.0-alpha.2]
+> 2021-02-20
+
+[0575208](https://github.com/ookangzheng/test-action-semantic-release/commit/0575208) fix: [SYG-6](https://coolbitx.atlassian.net/browse/SYG-6)   BBBBB
+
+[f0ffb46](https://github.com/ookangzheng/test-action-semantic-release/commit/f0ffb46) fix: [SYG-10](https://coolbitx.atlassian.net/browse/SYG-10)   test 4
+
+[2407a2e](https://github.com/ookangzheng/test-action-semantic-release/commit/2407a2e) fix: [SYG-10](https://coolbitx.atlassian.net/browse/SYG-10)   test 3
+
+
+[4.0.0-alpha.2]: https://github.com/ookangzheng/test-action-semantic-release/releases/tag/4.0.0-alpha.2
+
+
+## [4.0.0-alpha.1]
+> 2021-02-20
+
+[71ee124](https://github.com/ookangzheng/test-action-semantic-release/commit/71ee124) fix: [SYG-10](https://coolbitx.atlassian.net/browse/SYG-10)   test 2
+
+[f4aeed7](https://github.com/ookangzheng/test-action-semantic-release/commit/f4aeed7) fix: [SYG-10](https://coolbitx.atlassian.net/browse/SYG-10)   test 1
+
+[17492e5](https://github.com/ookangzheng/test-action-semantic-release/commit/17492e5) fix: [SYG-6](https://coolbitx.atlassian.net/browse/SYG-6)   ASSDF
+
+
+[4.0.0-alpha.1]: https://github.com/ookangzheng/test-action-semantic-release/releases/tag/4.0.0-alpha.1
+
+
 ## [3.0.0-alpha.2]
 > 2021-02-20
 
