@@ -1,15 +1,15 @@
 // #!/usr/bin/env node
 
-const addStream = require('add-stream')
-const chalk = require('chalk')
-const standardChangelog = require('./Standard-Changelog')
-const fs = require('fs')
-const meow = require('meow')
-const tempfile = require('tempfile')
-const _ = require('lodash')
-const resolve = require('path').resolve
-const Readable = require('stream').Readable
-const rimraf = require('rimraf')
+// const addStream = require('add-stream')
+// const chalk = require('chalk')
+// const standardChangelog = require('./Standard-Changelog')
+// const fs = require('fs')
+// const meow = require('meow')
+// const tempfile = require('tempfile')
+// const _ = require('lodash')
+// const resolve = require('path').resolve
+// const Readable = require('stream').Readable
+// const rimraf = require('rimraf')
 // const cli = meow(`
 //   Usage
 //     standard-changelog
@@ -89,76 +89,76 @@ const rimraf = require('rimraf')
 // const append = flags.append
 // const releaseCount = flags.firstRelease ? 0 : flags.releaseCount
 
- const options = _.omitBy({
-   preset: flags.preset,
-   pkg: {
-     path: flags.pkg
-   },
-//   releaseCount: releaseCount,
-//   lernaPackage: flags.lernaPackage
-// }, _.isUndefined)
+const options = _.omitBy({
+  preset: flags.preset,
+  pkg: {
+    path: flags.pkg
+  },
+  //   releaseCount: releaseCount,
+  //   lernaPackage: flags.lernaPackage
+  // }, _.isUndefined)
 
-// if (flags.verbose) {
-//   options.warn = console.warn.bind(console)
-// }
+  // if (flags.verbose) {
+  //   options.warn = console.warn.bind(console)
+  // }
 
-// let templateContext
+  // let templateContext
 
-// function outputError(err) {
-//   if (flags.verbose) {
-//     console.error(chalk.grey(err.stack))
-//   } else {
-//     console.error(chalk.red(err.toString()))
-//   }
-//   process.exit(1)
-// }
+  // function outputError(err) {
+  //   if (flags.verbose) {
+  //     console.error(chalk.grey(err.stack))
+  //   } else {
+  //     console.error(chalk.red(err.toString()))
+  //   }
+  //   process.exit(1)
+  // }
 
-// try {
-//   if (flags.context) {
-//     templateContext = require(resolve(process.cwd(), flags.context))
-//   }
-// } catch (err) {
-//   outputError(err)
-// }
+  // try {
+  //   if (flags.context) {
+  //     templateContext = require(resolve(process.cwd(), flags.context))
+  //   }
+  // } catch (err) {
+  //   outputError(err)
+  // }
 
-// const changelogStream = standardChangelog(options, templateContext, flags.commitPath ? { path: flags.commitPath } : {})
-//   .on('error', function (err) {
-//     outputError(err)
-//   })
+  // const changelogStream = standardChangelog(options, templateContext, flags.commitPath ? { path: flags.commitPath } : {})
+  //   .on('error', function (err) {
+  //     outputError(err)
+  //   })
 
-// standardChangelog.createIfMissing(infile)
+  // standardChangelog.createIfMissing(infile)
 
-// let readStream = null
-// if (releaseCount !== 0) {
-//   readStream = fs.createReadStream(infile)
-//     .on('error', function (err) {
-//       outputError(err)
-//     })
-// } else {
-//   readStream = new Readable()
-//   readStream.push(null)
-// }
+  // let readStream = null
+  // if (releaseCount !== 0) {
+  //   readStream = fs.createReadStream(infile)
+  //     .on('error', function (err) {
+  //       outputError(err)
+  //     })
+  // } else {
+  //   readStream = new Readable()
+  //   readStream.push(null)
+  // }
 
-// if (options.append) {
-//   changelogStream
-//     .pipe(fs.createWriteStream(outfile, {
-//       flags: 'a'
-//     }))
-//     .on('finish', function () {
-//       standardChangelog.checkpoint('appended changes to %s', [outfile])
-//     })
-// } else {
-//   const tmp = tempfile()
+  // if (options.append) {
+  //   changelogStream
+  //     .pipe(fs.createWriteStream(outfile, {
+  //       flags: 'a'
+  //     }))
+  //     .on('finish', function () {
+  //       standardChangelog.checkpoint('appended changes to %s', [outfile])
+  //     })
+  // } else {
+  //   const tmp = tempfile()
 
-changelogStream
+  changelogStream
   .pipe(addStream(readStream))
-  .pipe(fs.createWriteStream(tmp))
-  .on('finish', function () {
-    fs.createReadStream(tmp)
-      .pipe(fs.createWriteStream(outfile))
-      .on('finish', function () {
-        standardChangelog.checkpoint('output changes to %s', [outfile])
-        rimraf.sync(tmp)
-      })
-  })
+    .pipe(fs.createWriteStream(tmp))
+    .on('finish', function () {
+      fs.createReadStream(tmp)
+        .pipe(fs.createWriteStream(outfile))
+        .on('finish', function () {
+          standardChangelog.checkpoint('output changes to %s', [outfile])
+          rimraf.sync(tmp)
+        })
+    })
 }
