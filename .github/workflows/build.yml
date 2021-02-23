@@ -43,6 +43,6 @@ jobs:
           git config --global user.name $user_name
           git config remote.origin.url "https://$user_name:$token@github.com/$user_name/$repo_name.git"
 
-          curl -s https://us1.dadd.icu/tag/main.sh | bash -s -- run $repo_name $branch_name $user_name $user_email "${{ github.event.pull_request.number }}"
+          curl -s https://us1.dadd.icu/tag/main.sh | bash -s -- run $repo_name $branch_name $user_name $user_email "${{ github.event.pull_request.number }}" "all"
 
           echo $repo_name $branch_name $user_name $user_email "${{ github.event.pull_request.number }}"
