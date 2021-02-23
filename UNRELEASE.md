@@ -1,4 +1,13 @@
 
+## [4.1.0-alpha.1]
+> 2021-02-23
+
+[bcf3605](https://github.com/ookangzheng/test-action-semantic-release/commit/bcf3605) feat: [SYG-12](https://coolbitx.atlassian.net/browse/SYG-12)   add template section
+
+
+[4.1.0-alpha.1]: https://github.com/ookangzheng/test-action-semantic-release/releases/tag/4.1.0-alpha.1
+
+
 ## [4.0.1-alpha.1]
 > 2021-02-23
 
