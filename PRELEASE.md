@@ -1,4 +1,14 @@
 
+## [4.0.1-beta.1]
+> 2021-02-23
+
+
+[f50186e](https://github.com/ookangzheng/test-action-semantic-release/commit/f50186e) fix: [SYG-11](https://coolbitx.atlassian.net/browse/SYG-11)   asdf
+
+
+[4.0.1-beta.1]: https://github.com/ookangzheng/test-action-semantic-release/releases/tag/4.0.1-beta.1
+
+
 ## [4.0.0-beta.1]
 > 2021-02-22
 
